@@ -3,10 +3,221 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк | Главная</title>
+
+   <!-- заглушка на изображения <img src="http://placehold.it/150x100"> -->
   </head>
   <body>
 
+    <header class="page-header">
+      <!-- <h1 class="visually-hidden">Магазин приложений для мобилок — Pink</h1> -->
+      <div class="page-header__wrapper">
+
+        <nav class="main-nav  main-nav--closed  main-nav--nojs">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <div class="page-header__logo">
+                  <img src="http://placehold.it/150x100" width="150" height="100" alt="Pink logo">
+              </div>
+              <button class="main-nav__toggle" type="button">Открыть меню</button>
+            </li>
+            <li class="main-nav__item  main-nav__item--activ">
+              <a>Главная</a> <!-- Вставить ссылку на других страницах -->
+            </li>
+            <li class="main-nav__item">
+              <a href="photo.html">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="photo.html">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+
+        <section class="intro">
+        <!-- <h1 class="visually-hidden">Мобильные приложения на любой вкус</h1> -->
+          <div class="intro__image">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="Pnone image">
+          </div>
+
+            <article class="app-download">
+            <!-- <h1 class="visually-hidden">Скачайте приложение для своего мобильного</h1> -->
+              <div class="app-download__inner">
+                <a class="app-download__btn" href="https://www.apple.com/itunes/download/">Скачать приложение</a>
+
+                <div class="app-download__items">
+                  <a class="app-download__item  app-download__item--apple" href="https://itunes.apple.com/ru/store/">Скачать приложение Apple</a>
+                  <a class="app-download__item  app-download__item--android" href="https://play.google.com/store/apps">Скачать приложение Android</a>
+                  <a class="app-download__item  app-download__item--windows-mob" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">Скачать приложение Microsoft</a>
+                  <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows</p>
+                </div>
+              </div>
+
+            </article>
+
+        </section>
+
+      </div>
+
+    </header>
 
 
+    <main>
+
+      <article class="info">
+        <!-- <h1 class="visually-hidden">Информация о преимуществах</h1> -->
+
+        <div class="info_inner">
+
+          <section class="info__slogan">
+            <!-- <h1 class="visually-hidden">Наше кредо</h1> -->
+            <p>Устали от серости мегаполиса?</p>
+            <p>Нам есть, что вам предложить!</p>
+          </section>
+
+          <section class="info__features">
+            <!-- <h1 class="visually-hidden">Наши преимущества</h1> -->
+            <div class="info__text">
+              <h3>Поднимает настроение</h3>
+              <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </div>
+            <div class="info__text">
+              <h3>Меняет мир вокруг</h3>
+              <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект.</p>
+            </div>
+            <div class="info__text">
+              <h3>Заводит новых друзей</h3>
+              <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых.</p>
+            </div>
+          </section>
+
+          <div class="info__images">
+            <div class="info__image">
+              <img src="http://placehold.it/150x100" width="150" height="100" alt="Pnone image">
+            </div>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="review">
+        <!-- <h1 class="visually-hidden">Отзывы наших покупателей</h1> -->
+        <div class="review__inner">
+
+          <section class="review__item">
+            <!-- <h2 class="visually-hidden">Отзыв покупателя</h2> -->
+            <p><strong>Николай Петров</strong></p>
+            <blockquote>
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </blockquote>
+          </section>
+
+          <!-- <section class="review__item">
+            <h2 class="visually-hidden">Отзыв покупателя</h2>
+            <p><strong>Михаил Иванов</strong></p>
+            <blockquote>
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </blockquote>
+          </section>
+
+          <section class="review__item">
+            <h2 class="visually-hidden">Отзыв покупателя</h2>
+            <p><strong>Иван Сидоров</strong></p>
+            <blockquote>
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </blockquote>
+          </section> -->
+
+        </div>
+      </article>
+
+      <article class="price">
+        <!-- <h1 class="visually-hidden">Цены на приложения</h1> -->
+        <table class="price__table">
+          <thead class="price__table--head">
+            <tr>
+              <td></td>
+              <th>
+                <p>Стандарт<br>
+                  <span>3,99 USD</span>
+                </p>
+              </th>
+              <td></td>
+            </tr>
+          </thead>
+
+          <tbody class="price__table--body">
+            <tr>
+              <td></td>
+              <td>
+                <p>Розовый фильтр</p>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>
+                <p>Смайлики</p>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>
+                <p>Комментарии</p>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+
+        </table>
+      </article>
+
+      <article class="contacts">
+        <!-- <h1 class="visually-hidden">Контакты</h1> -->
+        <p>Остались вопросы?<br>
+        Свяжитесь с нами!</p>
+
+        <section class="contacts__call">
+          <!-- <h2 class="visually-hidden">Звоните нам!</h2> -->
+          <p>Звоните:</p>
+          <a href="tel:+7 (812) 555-66-66">+7 (812) 555-66-66</a>
+        </section>
+
+        <section class="contacts__write">
+          <!-- <h2 class="visually-hidden">Пишите нам!</h2> -->
+          <p>Пишите:</p>
+          <a href="email:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </section>
+
+        <section class="contacts__come">
+          <!-- <h2 class="visually-hidden">Приезжайте к нам в офис!</h2> -->
+          <p>Приезжайте в гости:</p>
+          <address>ул. Большая<br>
+                  Конюшенная, 19/8
+          </address>
+        </section>
+
+        <section class="contacts__map">
+          <!-- <h2 class="visually-hidden">Карта проезда</h2> -->
+          <div class="contacts__inner">
+            <div id="mymap" class="contacts__map--interactive"></div>
+          </div>
+        </section>
+
+      </article>
+
+    </main>
+
+
+    <!-- <footer class="page-footer">
+
+    </footer> -->
+
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=YwfyI4Itc9Ywak5XWXP6uEmXLBmsmdwu&amp;width=100%&amp;height=200&amp;lang=ru_UA&amp;sourceType=constructor&amp;scroll=true&amp;id=mymap"></script>
   </body>
 </html>
