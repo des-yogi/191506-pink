@@ -16,7 +16,7 @@
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <div class="page-header__logo">
-                  <img src="http://placehold.it/150x100" width="150" height="100" alt="Pink logo">
+                  <img src="http://placehold.it/150x100" width="150" height="100" alt="Pink logo" title="Логотип Пинк">
               </div>
               <button class="main-nav__toggle" type="button">Открыть меню</button>
             </li>
@@ -27,7 +27,7 @@
               <a href="photo.html">Фотографии</a>
             </li>
             <li class="main-nav__item">
-              <a href="photo.html">Конкурс</a>
+              <a href="form.html">Конкурс</a>
             </li>
             <li class="main-nav__item">
               <a href="">HTML Academy</a>
@@ -36,7 +36,7 @@
         </nav>
 
         <section class="intro">
-        <!-- <h1 class="visually-hidden">Мобильные приложения на любой вкус</h1> -->
+          <!-- <h1 class="visually-hidden">Мобильные приложения на любой вкус</h1> -->
           <div class="intro__image">
             <img src="http://placehold.it/150x100" width="150" height="100" alt="Pnone image">
           </div>
@@ -44,7 +44,7 @@
             <article class="app-download">
             <!-- <h1 class="visually-hidden">Скачайте приложение для своего мобильного</h1> -->
               <div class="app-download__inner">
-                <a class="app-download__btn" href="https://www.apple.com/itunes/download/">Скачать приложение</a>
+                <a class="download-btn" href="https://www.apple.com/itunes/download/">Скачать приложение</a>
 
                 <div class="app-download__items">
                   <a class="app-download__item  app-download__item--apple" href="https://itunes.apple.com/ru/store/">Скачать приложение Apple</a>
@@ -94,7 +94,7 @@
 
           <div class="info__images">
             <div class="info__image">
-              <img src="http://placehold.it/150x100" width="150" height="100" alt="Pnone image">
+              <img src="http://placehold.it/150x100" width="150" height="100" alt="Pnone image" title="Смартфон">
             </div>
           </div>
 
@@ -185,19 +185,19 @@
         <section class="contacts__call">
           <!-- <h2 class="visually-hidden">Звоните нам!</h2> -->
           <p>Звоните:</p>
-          <a href="tel:+7 (812) 555-66-66">+7 (812) 555-66-66</a>
+          <a href="tel:+7 (812) 555-66-66" title="Наш телефон">+7 (812) 555-66-66</a>
         </section>
 
         <section class="contacts__write">
           <!-- <h2 class="visually-hidden">Пишите нам!</h2> -->
           <p>Пишите:</p>
-          <a href="email:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a href="email:mail@htmlacademy.ru" title="Наша электропочта">mail@htmlacademy.ru</a>
         </section>
 
         <section class="contacts__come">
           <!-- <h2 class="visually-hidden">Приезжайте к нам в офис!</h2> -->
           <p>Приезжайте в гости:</p>
-          <address>ул. Большая<br>
+          <address title="Наш адрес">ул. Большая<br>
                   Конюшенная, 19/8
           </address>
         </section>
@@ -205,7 +205,9 @@
         <section class="contacts__map">
           <!-- <h2 class="visually-hidden">Карта проезда</h2> -->
           <div class="contacts__inner">
-            <div id="mymap" class="contacts__map--interactive"></div>
+            <div id="mymap" class="contacts__map--interactive  contacts__map--nojs">
+              <img src="http://placehold.it/150x100" title="Карта проезда" width="150" height="100" alt="Карта проезда">
+            </div>
           </div>
         </section>
 
@@ -218,6 +220,5 @@
 
     </footer> -->
 
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=YwfyI4Itc9Ywak5XWXP6uEmXLBmsmdwu&amp;width=100%&amp;height=200&amp;lang=ru_UA&amp;sourceType=constructor&amp;scroll=true&amp;id=mymap"></script>
   </body>
 </html>
