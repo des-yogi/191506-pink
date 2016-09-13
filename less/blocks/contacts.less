@@ -1,1 +1,45 @@
+.contacts {
+  .container();
+  padding-top: 45px;
+  text-align: center;
+}
 
+.contacts__question {
+  margin-bottom: 35px;
+  font-size: @font-size--biggest;
+  font-weight: @font-weight--light;
+  line-height: @line-height--auto;
+}
+
+.contacts__call,
+.contacts__write {
+  margin-bottom: 20px;
+}
+
+.contacts__call p,
+.contacts__write p,
+.contacts__come p {
+  font-size: @font-size--big;
+  font-weight: @font-weight--bold;
+}
+
+.contacts__call a,
+.contacts__write a,
+.contacts__come address {
+  font-size: @font-size--biggest;
+  font-weight: @font-weight--light;
+  font-style: normal;
+  color: @color--highlighted;
+}
+
+.contacts__come {
+  margin-bottom: 40px;
+}
+
+.contacts__map-container {
+  width: 100%;
+  height: 200px;
+  background: url(../img/map-marker.svg) no-repeat 50% 50%,
+              url(../img/bg-map-mobile@1x.png) no-repeat 0 100% #eae6dd;
+  background-size: 36px 35px, 100%;
+}
