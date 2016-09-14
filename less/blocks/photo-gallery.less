@@ -1,1 +1,71 @@
+.photo-gallery__wrapper {
+  .container();
+  padding: 0 20px 0 20px;
+}
+.photo-gallery__question {
+  padding: 47px 0;
+  line-height: @line-height--loose;
+  text-align: center;
+}
 
+.photo-gallery__invocation {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  line-height: @line-height--loose;
+  text-align: center;
+}
+
+.photo-gallery__inner {
+  padding: 18px 15px 0 15px;
+
+  blockquote {
+    margin-bottom: 10px;
+    line-height: @line-height;
+  }
+}
+
+.photo-gallery__item {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: @bg--grey;
+
+  a {
+    display: block;
+    line-height: 0;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+.photo-gallery__text {
+  padding-bottom: 2px;
+  font-weight: @font-weight--bold;
+  line-height: @line-height;
+
+    span {
+      font-size: @font-size - 2px;
+      font-weight: @font-weight--light;
+      text-transform: uppercase;
+    }
+}
+
+.photo-gallery__likes {
+  position: relative;
+  padding-left: 30px;
+  font-size: @font-size - 2px;
+  font-weight: @font-weight;
+  text-transform: uppercase;
+  color: @color--highlighted;
+  &::before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 13px;
+    height: 12px;
+    background: url(../img/icon-heart.svg) no-repeat 0 0 transparent;
+  }
+}

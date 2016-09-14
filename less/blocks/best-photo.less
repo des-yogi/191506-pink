@@ -1,1 +1,70 @@
+.best-photo__inner {
+  position: relative;
+}
 
+.best-photo__inner {
+  a {
+  display: block;
+  line-height: 0;
+  }
+
+  img {
+    height: 100%;
+    transform: translateX(-20px);
+  }
+}
+
+.best-photo__tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 20px;
+  font-size: 12px;
+  font-weight: @font-weight--bold;
+  line-height: @line-height;
+  text-transform: uppercase;
+  text-align: center;
+  color: @color--invert;
+  background-color: #d22856;
+}
+
+.best-photo__post {
+  padding: 18px 15px 20px 15px;
+  margin-bottom: 20px;
+  background-color: @bg--grey;
+
+  blockquote {
+    margin-bottom: 10px;
+    line-height: @line-height;
+  }
+}
+
+.best-photo__text {
+  padding-bottom: 2px;
+  font-weight: @font-weight--bold;
+  line-height: @line-height;
+
+  span {
+    font-size: @font-size - 2px;
+    font-weight: @font-weight--light;
+    text-transform: uppercase;
+  }
+}
+
+.best-photo__likes {
+  position: relative;
+  padding-left: 30px;
+  font-size: @font-size - 2px;
+  text-transform: uppercase;
+  color: @color--highlighted;
+  &::before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 13px;
+    height: 12px;
+    background: url(../img/icon-heart.svg) no-repeat 0 0 transparent;
+  }
+}

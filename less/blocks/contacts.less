@@ -33,7 +33,22 @@
 }
 
 .contacts__come {
+  position: relative;
   margin-bottom: 40px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 33px solid;
+    border-bottom: none;
+    border-color: #fff transparent #fff transparent;
+    transform: scaleX(4.84) translateY(73px);
+    transform-origin: 0 0;
+  }
 }
 
 .contacts__map-container {
