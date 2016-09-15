@@ -1,0 +1,85 @@
+.filter-labs {
+  .container();
+  padding: 20px 20px 40px 20px;
+  background-color: @bg--grey;
+}
+
+.filter-labs__inner {
+  margin-bottom: 33px;
+}
+
+.filter-labs__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-labs__form input {
+  display: none;
+}
+
+.filter-labs__form label {
+  margin: 0 19px;
+  margin-bottom: 17px;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.filter-labs__crop img {
+  width: 48px;
+  height: 48px;
+}
+
+.filter-labs__fill img {
+  width: 55px;
+  height: 50px;
+}
+
+.filter-labs__form button {
+  flex-basis: 100%;
+}
+
+.filter-labs__range {
+  position: relative;
+  flex-basis: 240px;
+  height: 14px;
+  margin-bottom: 28px + 40px;
+
+  &::after {
+    position: absolute;
+    left: -40px;
+    bottom: -28px;
+    content: "";
+    width: 320px;
+    height: 1px;
+    background-color: @bg--darkblue;
+    opacity: 0.1;
+  }
+}
+
+.filter-labs__bar {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: @bg--darkblue;
+}
+
+.filter-labs__toggle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background-color: @bg--grey;
+  border: 2px solid @color--highlighted;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filter-labs__fill,
+.filter-labs__contrast {
+  opacity: 0.2;
+}
