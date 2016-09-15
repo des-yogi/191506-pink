@@ -8,33 +8,34 @@
   text-align: center;
   color: @color--invert;
 
-  &--download {
-    width: 100%;
-    margin-bottom: 32px;
-    border: 3px solid white;
-    border-radius: 28px;
-  }
+    &--download {
+      width: 100%;
+      margin-bottom: 32px;
+      border: 3px solid white;
+      border-radius: 28px;
+    }
 
   &--toggler {
-  font-size: 0;
-  width: 12px;
-  height: 12px;
-  padding: 0;
-  margin: 0 5px;
-  background-color: @bg--darkblue;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  cursor: pointer;
-  &:hover,
-    :focus {
-    background-color: @bg;
-    border: 3px solid @bg--darkblue;
-   }
-  }
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    margin: 0 5px;
+    background-color: @bg--darkblue;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
 
-  &--toggler.active {
-    background-color: @bg;
-    border: 3px solid @bg--darkblue;
+      &:hover,
+      &:focus {
+        background-color: @bg;
+        border: 3px solid @bg--darkblue;
+      }
+
+      &.active {
+        background-color: @bg;
+        border: 3px solid @bg--darkblue;
+      }
   }
 
   &--inactive {
@@ -46,11 +47,12 @@
     background-color: transparent;
     border: 3px solid @color--highlighted;
     border-radius: 30px;
-    &:hover,
-      :focus {
-      color: @color--invert;
-      background-color: @color--highlighted;
-    }
+
+      &:hover,
+      &:focus {
+        color: @color--invert;
+        background-color: @color--highlighted;
+      }
   }
 
    &--filter-cancel {
@@ -58,15 +60,16 @@
     border: 3px solid @color;
     color: @color;
     opacity: 0.1;
-    &:hover,
-      :focus {}
+
+      &:hover,
+      &:focus {}
   }
 
   &--form {
-  width: 100%;
-  padding: 21px 10px;
-  background-color: #2aab6d;
-  border: 2px solid #2aab6d;
-  border-radius: 3px;
+    width: 100%;
+    padding: 21px 10px;
+    background-color: #2aab6d;
+    border: 2px solid #2aab6d;
+    border-radius: 3px;
   }
 }
