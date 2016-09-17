@@ -1,9 +1,88 @@
 .main-nav {
-  /* &--closed {
-    .main-nav__item:not(.main-nav__item--logo) {
-      display: none;
+  @media @desktop-width {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 130px;
+    padding-right: 130px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.main-nav__logo {
+  min-height: 70px;
+  padding: 22px 20px 22px 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid black;
+
+  &--nojs {
+    background-color: @bg--darkblue;
+  }
+
+  img {
+    width: 75px;
+    height: 21px;
+
+    @media @tablet-width {
+      width: 147px;
+      height: 40px;
     }
-  } */
+  }
+
+  @media @tablet-width {
+    min-height: 109px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 27px;
+  }
+
+  @media @desktop-width {
+    padding-left: 0;
+    padding-right: 170px;
+    background-color: transparent;
+  }
+}
+
+.main-nav__toggle {
+  float: right;
+  font-size: 0;
+  border: none;
+
+  &--closed {
+    width: 50px;
+    height: 24px;
+    background: url(../img/menu-burger.svg) no-repeat 0 0 transparent;
+  }
+
+  &--open {
+    width: 24px;
+    height: 23px;
+    background: url(../img/menu-cross.svg) no-repeat 0 0 transparent;
+  }
+
+  @media @tablet-width {
+    margin-top: 18px;
+  }
+
+  @media @desktop-width {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  display: none;
+  background-color: @bg--darkblue;
+
+   &--nojs {
+   display: block;
+ }
+
+  @media @desktop-width {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    background: none;
+  }
 }
 
 .main-nav__item {
@@ -16,10 +95,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid black;
 
-  &:first-child {
-    .clearfix();
-  }
-
   a {
     display: block;
     width: 100%;
@@ -27,21 +102,17 @@
     padding-bottom: 22px;
     text-align: center;
     color: @color--invert;
-  }
-}
 
-.main-nav__toggle {
-  float: right;
-  width: 24px;
-  height: 23px;
-  margin-top: 22px;
-  margin-right: 20px;
-  font-size: 0;
-  background: url(../img/menu-cross.svg) no-repeat 0 0 transparent;
-  border: none;
-  /* &--closed {
-    width: 50px;
-    height: 24px;
-    background: url(../img/menu-burger.svg) no-repeat 0 0 transparent;
-  } */
+    @media @desktop-width {
+      padding-left: 60px;
+    }
+  }
+
+  @media @desktop-width {
+    font-size: @font-size--big;
+    font-weight: @font-weight;
+    line-height: @line-height;
+    text-transform: none;
+    border: none;
+  }
 }

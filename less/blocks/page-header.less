@@ -1,14 +1,9 @@
 .page-header__inner {
   .container();
-  background-color: @bg--darkblue;
-}
+  background: url(../img/bg-back-mobile@1x.jpg) no-repeat 50% 0 @bg--darkblue;
 
-.page-header__logo {
-  float: left;
-
-  a {
-  text-align: left;
-  padding-left: 20px;
+  &--nojs {
+    background-position: 50% 263px;
   }
 }
 
@@ -20,5 +15,4 @@
   line-height: @line-height--auto;
   text-align: center;
   color: @color--invert;
-  background: url(../img/bg-back-mobile@1x.jpg) no-repeat 50% 24% transparent;
 }
