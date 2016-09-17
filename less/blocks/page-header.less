@@ -1,18 +1,18 @@
 .page-header__inner {
   .container();
-  background: url(../img/bg-back-mobile@1x.jpg) no-repeat 50% 0 @bg--darkblue;
-
-  &--nojs {
-    background-position: 50% 263px;
-  }
 }
 
 .page-header__title {
-  min-height: 170px;
-  padding: 32px 20px 30px 20px;
+  position: relative;
+  z-index: -1;
+  height: 237px;
+  padding: 99px 20px 30px 10px;
+  margin-top: -67px;
   font-size: @font-size--biggest;
   font-weight: @font-weight--light;
   line-height: @line-height--auto;
   text-align: center;
   color: @color--invert;
+  overflow: hidden;
+  background: url(../img/bg-back-mobile@1x.jpg) no-repeat center 0 @bg--darkblue;
 }
