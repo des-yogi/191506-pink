@@ -1,21 +1,23 @@
 .main-nav {
   background-color: rgba(0, 0, 0, 0.3);
 
-  @media @desktop-width {
+  /* @media @desktop-width {
     display: flex;
     justify-content: flex-start;
-  }
+  } */
 
   &--nojs {
     background-color: @bg--darkblue;
   }
+}
 
-  &--inner {
-    background-color: transparent;
+.main-nav__inner {
+  background-color: transparent;
 
-    @media @desktop-width {
-      .container();
-    }
+  @media @desktop-width {
+    .container();
+    display: flex;
+    justify-content: flex-start;
   }
 }
 
