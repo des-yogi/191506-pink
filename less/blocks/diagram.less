@@ -1,0 +1,109 @@
+.diagram {
+  display: none;
+
+  @media @tablet-width {
+    display: block;
+    width: 100%;
+  }
+
+  @media @desktop-width {
+    background-color: @bg--grey;
+    outline: 1px dotted green;
+  }
+}
+
+.diagram__inner {
+  .container();
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 59px;
+  padding-bottom: 44px;
+
+  @media @desktop-width {
+    padding-top: 33px;
+    padding-bottom: 59px;
+  }
+}
+
+.diagram__img {
+  position: relative;
+  margin: 0;
+  margin-right: 70px;
+
+  img {
+    width: 238px;
+    height: 276px;
+
+    @media @desktop-width {
+      width: 298px;
+      height: 345px;
+    }
+  }
+
+  p {
+    position: absolute;
+    top: 104px;
+    left: 65px;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 1;
+    color: @color--highlighted;
+
+    @media @desktop-width {
+      top: 129px;
+      left: 79px;
+      font-size: 120px;
+    }
+  }
+}
+
+.diagram__text {
+  padding-top: 40px;
+  padding-right: 15px;
+
+  @media @desktop-width {
+    padding-top: 93px;
+    padding-right: 50px;
+
+    br {
+      display: none;
+    }
+  }
+
+  h2 {
+    margin-bottom: 12px;
+    font-size: 2.143rem;
+    font-weight: @font-weight--bold;
+    line-height: 2.571rem;
+    color: @color--title;
+
+    @media @desktop-width {
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: @font-size;
+    font-weight: @font-weight;
+    line-height: @line-height;
+    color: @color;
+
+    @media @desktop-width {
+      margin-bottom: 31px;
+      font-size: @font-size--big;
+      line-height: @line-height--loose;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: @color--highlighted;
+
+    @media @desktop-width {
+      font-size: @font-size--big;
+      line-height: @line-height--loose;
+    }
+  }
+}

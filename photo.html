@@ -7,32 +7,36 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header  page-header--nojs">
       <div class="page-header__inner">
         <nav class="main-nav  main-nav--closed  main-nav--nojs">
-          <div class="main-nav__logo  main-nav__logo--nojs">
-            <a href="index.html">
-              <picture>
-                <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg" width="147" height="40" alt="Pink logo" title="Логотип Пинк">
-                <img src="img/logo-pink-white-mobile.svg" width="75" height="21" alt="Pink logo" title="Логотип Пинк">
-              </picture>
-            </a>
-            <button class="main-nav__toggle  main-nav__toggle--closed  main-nav__toggle--open" type="button" title="Кнопка меню">Открыть меню</button>
+          <div class="main-nav main-nav--inner">
+            <div class="main-nav__logo  main-nav__logo--nojs">
+              <div class="page-header__inner">
+              <a href="index.html">
+                <picture>
+                  <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg" width="147" height="40" alt="Pink logo" title="Логотип Пинк">
+                  <img src="img/logo-pink-white-mobile.svg" width="75" height="21" alt="Pink logo" title="Логотип Пинк">
+                </picture>
+              </a>
+              <button class="main-nav__toggle  main-nav__toggle--closed  main-nav__toggle--open" type="button" title="Кнопка меню">Открыть меню</button>
+              </div>
+            </div>
+            <ul class="main-nav__list  main-nav__list--nojs">
+              <li class="main-nav__item  main-nav__item--activ">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a>Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">HTML Academy</a>
+              </li>
+            </ul>
           </div>
-          <ul class="main-nav__list  main-nav__list--nojs">
-            <li class="main-nav__item  main-nav__item--activ">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a>Фотографии</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">HTML Academy</a>
-            </li>
-          </ul>
         </nav>
         <h1 class="page-header__title">Фотографии пользователей</h1>
       </div>

@@ -1,10 +1,46 @@
 .info {
-  margin-top: -67px;
+  padding-top: 40px;
+
+  @media @tablet-width {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0;
+    background-color: @bg--grey;
+  }
 }
 
 .info__inner {
   .container();
-  padding-top: 42px;
+  margin-bottom: 67px;
+}
+
+.info__container {
+  .container();
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  background-color: @bg--grey;
+
+  @media @tablet-width {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    //width: 100%;
+    height: 482px;
+    background-color: transparent;
+    //outline: 1px solid blue;
+  }
+
+  @media @desktop-width {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    width: 940px;
+    height: 610px;
+    margin-top: -25px;
+    outline: 1px solid blue;
+  }
 }
 
 .info__slogan {
@@ -25,17 +61,80 @@
     width: 100%;
     height: 33px;
     background-image: linear-gradient(to bottom right, #fff 50%, @bg--grey 50%);
+
+    @media @tablet-width {
+      bottom: -55px;
+      height: 55px;
+    }
+
+    @media @desktop-width {
+      bottom: -75px;
+      height: 75px;
+    }
   }
 
-  p:nth-child(2) {
+  p:nth-child(1) {
     margin-bottom: 30px;
+
+    @media @tablet-width {
+      margin-bottom: 0;
+    }
+  }
+
+  @media @tablet-width {
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 46px;
+    padding-top: 48px;
+    //margin-bottom: 45px;
+    font-size: @font-size--h1;
+    background-color: white;
+    //outline: 1px solid green;
+
+    p:nth-child(2) {
+      padding: 0 60px;
+    }
+  }
+
+  @media @desktop-width {
+    padding-top: 67px;
+    padding-bottom: 89px;
+    font-size: 3.571rem;
+
+    p:nth-child(2) {
+      padding: 0 120px;
+    }
   }
 }
 
 .info__features {
-  .container();
-  padding: 80px 20px 9px 20px;
-  background-color: @bg--grey;
+  padding: 46px 0 9px 0;
+
+  @media @tablet-width {
+    width: auto;
+  }
+
+  @media @desktop-width {
+    padding: 0;
+  }
+}
+
+.info__text-wrapper {
+  width: 280px;
+  margin: auto;
+
+  @media @tablet-width {
+    width: auto;
+    padding-top: 24px;
+  }
+
+  @media @desktop-width {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 940px;
+    padding-top: 0;
+  }
 }
 
 .info__text {
@@ -45,15 +144,103 @@
     margin-bottom: 13px;
     font-size: @font-size--big;
     font-weight: @font-weight--bold;
+
+    @media @desktop-width {
+      margin-bottom: 25px;
+      padding: 0 5px;
+      font-size: 2.143rem;
+      font-weight: @font-weight--bold;
+      line-height: 2.143rem;
+    }
   }
 
   p {
     margin-bottom: 30px;
     line-height: @line-height;
+
+    @media @tablet-width {
+      margin-bottom: 34px;
+    }
+
+    @media @desktop-width {
+      font-size: @font-size--big;
+      line-height: @line-height--loose;
+    }
+  }
+
+  @media @tablet-width {
+    text-align: left;
+  }
+
+  @media @desktop-width {
+    width: 33.333%;
+    padding: 0 35px;
+    text-align: center;
+    outline: 1px dashed red;
   }
 }
 
 .info__images {
+  @media @tablet-width {
+    width: 268px;
+    height: 482px;
+    margin-right: 41px;
+  }
+
+  @media @desktop-width {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 940px;
+    margin-right: 0;
+    margin-bottom: 56px;
+    outline: 1px dashed green;
+  }
+}
+
+.info__image {
   min-height: 279px;
-  background: url(../img/iphone-screen-mobile@1x.png) no-repeat 50% 0 @bg--grey;
+
+  &--first,
+  &--second {
+    display: none;
+
+    @media @desktop-width {
+      display: block;
+      width: 294px;
+      height: 301px;
+      margin: 0 2px;
+      background-position: 0 100%;
+    }
+  }
+
+  &--first {
+    background: url(../img/iphone-screen-1-desktop@1x.png) no-repeat transparent;
+  }
+
+  &--second {
+    background: url(../img/iphone-screen-2-desktop@1x.png) no-repeat transparent;
+  }
+
+  &--fird {
+    background: url(../img/iphone-screen-mobile@1x.png) no-repeat 50% 0 transparent;
+
+    @media @tablet-width {
+      width: 268px;
+      height: 482px;
+      background: url(../img/iphone-screen-tablet@1x.png) no-repeat transparent;
+      background-position: 50% 100%;
+      background-size: cover;
+    }
+
+    @media @desktop-width {
+      width: 294px;
+      height: 301px;
+      margin: 0 1px;
+      background: url(../img/iphone-screen-3-desktop@1x.png) no-repeat transparent;
+      background-position: 0 100%;
+    }
+  }
+  outline: 1px solid black;
 }

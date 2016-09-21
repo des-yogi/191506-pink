@@ -1,7 +1,19 @@
 .app-download {
-  .container();
-  padding: 28px 20px;
-  background-color: #1d2631;
+
+  @media @tablet-width {
+    background: none;
+    outline: 1px solid red;
+  }
+}
+
+.app-download__inner {
+  padding-top: 29px;
+  padding-bottom: 28px;
+
+  @media @tablet-width {
+    padding: 0;
+    width: 300px;
+  }
 }
 
 .app-download__items {
@@ -15,6 +27,11 @@
     font-weight: @font-weight--light;
     text-align: center;
     color: @color--invert;
+
+    @media @tablet-width {
+      font-size: @font-size--big;
+      line-height: @line-height;
+    }
   }
 }
 
@@ -22,4 +39,33 @@
   font-size: 0;
   margin: 0 18px;
   margin-bottom: 5px;
+
+  @media @tablet-width {
+    margin-bottom: 24px;
+  }
+
+  @media @desktop-width {
+    margin-bottom: 41px;
+  }
+}
+
+// Стиль для всех страниц кроме главной
+.app-download__title {
+  display: none;
+
+  @media @tablet-width {
+    display: block;
+    padding: 0 30px;
+    margin-bottom: 35px;
+    font-size: @font-size--h1;
+    font-weight: @font-weight--light;
+    line-height: 1.2;
+    text-align: center;
+    color: @color--invert;
+  }
+
+  @media @desktop-width {
+    font-size: 50px;
+    margin-bottom: 53px;
+  }
 }

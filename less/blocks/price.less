@@ -1,13 +1,23 @@
 .price {
-  .container();
   padding-top: 90px;
   padding-bottom: 47px;
   background-color: @bg--grey;
 }
+
 .price__table {
+  .container();
+  padding: 0;
   display: table;
   width: 100%;
   margin-bottom: 40px;
+
+  @media @tablet-width {
+    padding: 0 20px;
+  }
+
+  @media @desktop-width {
+    padding: 0 10px;
+  }
 }
 
 .price__row {
@@ -23,51 +33,155 @@
     text-align: center;
     color: @color--invert;
     background-color: @bg--darkblue;
+
+    & li:first-child {
+      background-color: @bg--grey;
+      border: none;
+    }
+
+    @media @tablet-width {
+      font-size: 16px;
+    }
+
+    @media @desktop-width {
+      font-size: 18px;
+    }
+  }
+
+  & li:first-child {
+    display: none;
+
+    @media @tablet-width {
+      display: table-cell;
+    }
+  }
+
+  & li:nth-child(even) {
+    background-position: -50px;
+
+    @media @tablet-width {
+      background-position: center center;
+    }
   }
 }
 
 .price__cell {
   display: table-cell;
+  width: 280px;
   text-transform: uppercase;
   border: 1px solid @border-color;
 
   &--zero {
-    width: 20px;
+    //width: 20px;
+    width: 6.25%;
   }
 
   &--hit,
   &--title {
+    //width: 280px;
     padding: 16px 0;
   }
 
   &--title {
     padding-left: 20px;
+
+    @media @tablet-width {
+      font-size: 0;
+      padding-top: 14px;
+      padding-bottom: 2px;
+    }
+  }
+
+  &--caption {
+    font-size: 0;
+
+    @media @tablet-width {
+      font-size: 16px;
+    }
+
+    @media @desktop-width {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      font-size: 18px;
+    }
   }
 
   &--yes {
-    background: url(../img/icon-yes.svg) no-repeat left 230px top 20px;
+    background: url(../img/icon-yes.svg) no-repeat right 20px top 20px;
     background-size: 31px 21px;
+
+    @media @tablet-width {
+      background-position: center center;
+    }
   }
 
   &--no {
-    background: url(../img/icon-no.svg) no-repeat left 230px top 15px;
+    background: url(../img/icon-no.svg) no-repeat right 20px top 15px;
     background-size: 27px 26px;
+
+    @media @tablet-width {
+      background-position: center center;
+    }
   }
 
   &--hit {
     position: relative;
     padding: 18px 0;
-    background: url(../img/bg-hit.svg) no-repeat 0 0;
-    background-size: 74px 73px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      z-index: 5;
+      display: block;
+      width: 74px;
+      height: 73px;
+      background: url(../img/bg-hit.svg) no-repeat 0 0;
+      background-size: 74px 73px;
+
+      @media @tablet-width {
+        width: 60px;
+        height: 60px;
+        background-size: 60px 60px;
+      }
+    }
+
     &::after {
       position: absolute;
       top: 13px;
       left: 9px;
+      z-index: 10;
       content: "Хит";
       font-size: @font-size;
       text-transform: uppercase;
       transform: rotate(-45deg);
+
+      @media @tablet-width {
+        top: 7px;
+        left: 6px;
+      }
     }
+
+    @media @tablet-width {
+      padding: 10px 0;
+    }
+  }
+
+  &--first-col {
+    padding-left: 15px;
+    text-transform: none;
+
+    @media @desktop-width {
+      padding-left: 22px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      font-size: @font-size--big;
+    }
+  }
+
+  @media @tablet-width {
+    width: 25%;
   }
 }
 
@@ -75,6 +189,29 @@
   font-size: @font-size--biggest;
   font-weight: @font-weight--light;
   line-height: @line-height--loose;
+
+  @media @tablet-width {
+    font-size: @font-size--big;
+  }
+
+  @media @desktop-width {
+    font-size: @font-size--biggest;
+  }
+
+   &--zero {
+    font-size: 0;
+    background-image: none;
+
+    @media @tablet-width {
+      font-size: @font-size--big;
+      font-weight: @font-weight--light;
+      line-height: @line-height--loose;
+    }
+
+    @media @desktop-width {
+      font-size: @font-size--biggest;
+    }
+  }
 }
 
 .price__toggle {
@@ -82,4 +219,8 @@
   justify-content: center;
   width: 100%;
   min-height: 12px;
+
+  @media @tablet-width {
+    display: none;
+  }
 }

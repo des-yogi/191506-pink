@@ -1,7 +1,5 @@
-.review__inner {
+.review {
   position: relative;
-  .container();
-  padding: 42px 20px 37px 20px;
 
   &::after {
     position: absolute;
@@ -12,6 +10,64 @@
     width: 100%;
     height: 26px;
     background-image: linear-gradient(to bottom right, #fff 50%, @bg--grey 50%);
+
+    @media @tablet-width {
+      bottom: -55px;
+      height: 55px;
+    }
+
+    @media @desktop-width {
+      bottom: -67px;
+      height: 67px;
+    }
+  }
+}
+
+.review__wrapper {
+  //position: relative;
+  .container();
+  padding: 42px 20px 37px 20px;
+
+  @media @tablet-width {
+    padding-top: 47px;
+    padding-bottom: 16px;
+  }
+
+  @media @desktop-width {
+    position: relative;
+    padding-top: 187px;
+    background-image: url(../img/icon-quotes.svg);
+    background-repeat: no-repeat;
+    background-size: 79px 63px;
+    background-position: 50% 72px;
+
+    &::before {
+      position: absolute;
+      top: 213px;
+      left: 15px;
+      content: "";
+      width: 31px;
+      height: 31px;
+      border-top: 3px solid @color;
+      border-left: 3px solid @color;
+      transform: rotate(-45deg);
+      opacity: 0.3;
+      cursor: pointer;
+    }
+
+    &::after {
+      position: absolute;
+      top: 213px;
+      right: 15px;
+      content: "";
+      width: 31px;
+      height: 31px;
+      border-top: 3px solid @color;
+      border-right: 3px solid @color;
+      transform: rotate(45deg);
+      opacity: 0.3;
+      cursor: pointer;
+    }
   }
 }
 
@@ -20,10 +76,64 @@
   line-height: @line-height--loose;
   text-align: center;
 
-  p {
+  @media @tablet-width {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  @media @desktop-width {
+    padding: 0 125px;
+  }
+
+  &--author {
     margin-bottom: 13px;
     font-size: @font-size--big;
     font-weight: font-weight--bold;
+
+    @media @tablet-width {
+      order: 0;
+      margin-bottom: 2px;
+      font-size: 1.426rem;
+    }
+
+    @media @desktop-width {
+      font-size: @font-size--biggest;
+    }
+  }
+
+  &--descr {
+    display: none;
+
+    @media @tablet-width {
+      order: -1;
+      display: block;
+      margin-bottom: 0;
+      font-size: @font-size;
+    }
+
+    @media @desktop-width {
+      font-size: @font-size--big;
+    }
+  }
+
+  blockquote {
+    @media @tablet-width {
+      margin-bottom: 35px;
+      font-size: @font-size--big;
+      line-height: @line-height--loose;
+      order: 0;
+    }
+  }
+
+  &--02,
+  &--03 {
+    display: none;
+
+    @media @tablet-width {
+      display: none;
+    }
   }
 }
 
@@ -33,4 +143,8 @@
   width: 100%;
   min-height: 12px;
   margin-bottom: 4px;
+
+  @media @tablet-width {
+    display: none;
+  }
 }

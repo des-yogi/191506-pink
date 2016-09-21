@@ -1,10 +1,28 @@
-.page-header__inner {
-  .container();
+.page-header {
+  background: url(../img/bg-back-mobile@1x.jpg) no-repeat #1d2631;
+  background-position: center 0;
+
+  &--nojs {
+    background-position: center 258px;
+  }
+
+  @media @tablet-width {
+    background-image: none;
+    background-color: @bg--darkblue;
+  }
 }
 
+.page-header__inner {
+  .container();
+
+  @media @desktop-width {
+    width: auto;
+    padding: 0;
+  }
+}
+
+// Стиль для photo & form.html only
 .page-header__title {
-  position: relative;
-  z-index: -1;
   height: 237px;
   padding: 99px 20px 30px 10px;
   margin-top: -67px;
@@ -14,5 +32,4 @@
   text-align: center;
   color: @color--invert;
   overflow: hidden;
-  background: url(../img/bg-back-mobile@1x.jpg) no-repeat center 0 @bg--darkblue;
 }

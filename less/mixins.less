@@ -8,13 +8,35 @@
 
 .container() {
   width: 320px;
+  padding: 0 20px;
   margin: auto;
 
   @media @tablet-width {
-    width: 700px;
+    width: 660px;
+    margin: auto;
   }
 
   @media @desktop-width {
-    width: 1200px;
+    width: 960px;
+    padding: 0 10px;
+    margin: auto;
   }
 }
+
+ /*.full-width() {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-left: calc(-100vw / 2 + 320px / 2);
+  margin-right: calc(-100vw / 2 + 320px / 2);
+}*/
+
+/* .full-width-cancel() {
+  width: auto;
+  position: static;
+  margin: 0;
+}
+ */
