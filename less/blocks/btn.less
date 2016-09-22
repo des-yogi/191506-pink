@@ -12,7 +12,7 @@
     width: 100%;
     margin-bottom: 32px;
     border: 3px solid white;
-    border-radius: 28px;
+    border-radius: 50px;
 
     @media @tablet-width {
       margin-bottom: 45px;
@@ -54,7 +54,7 @@
     color: @color--highlighted;
     background-color: transparent;
     border: 3px solid @color--highlighted;
-    border-radius: 30px;
+    border-radius: 50px;
 
     &:hover,
     &:focus {
@@ -68,6 +68,15 @@
     border: 3px solid @color;
     color: @color;
     opacity: 0.1;
+
+    @media @tablet-width {
+      margin-top: 20px;
+    }
+
+    @media @desktop-width {
+      margin-top: 0;
+      margin-left: 45px;
+    }
 
     &:hover,
     &:focus {}

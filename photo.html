@@ -37,19 +37,27 @@
           </ul>
         </div>
       </nav>
-      <h1 class="page-header__title">Фотографии пользователей</h1>
+      <h1 class="page-header__title">Фотографии <br> пользователей</h1>
     </header>
+
     <main>
       <article class="photo-gallery">
         <h1 class="visually-hidden">Фотогалерея наших пользователей</h1>
         <div class="photo-gallery__wrapper">
           <p class="photo-gallery__question">Взгляните на фотографии, которые выкладывают пользователи! <br>Видите, как не хватает ваших?</p>
-          <article class="best-photo">
-            <h1 class="visually-hidden">Панорама дня</h1>
-            <div class="best-photo__inner">
-              <a href="#"><img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фото дня" title="Фото дня"></a>
-              <p class="best-photo__tag">ПАНОРАМА ДНЯ</p>
-            </div>
+        </div>
+
+        <article class="best-photo">
+          <h1 class="visually-hidden">Панорама дня</h1>
+          <div class="best-photo__inner">
+            <a href="#">
+              <img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фото дня" title="Фото дня">
+            </a>
+           <div class="best-photo__wrapper">
+             <p class="best-photo__tag">ПАНОРАМА ДНЯ</p>
+           </div>
+          </div>
+          <div class="best-photo__wrapper">
             <section class="best-photo__post">
               <h2 class="visually-hidden">Пост автора фото дня</h2>
               <p class="best-photo__text"><strong>Анна</strong> <span>(5 минут назад)</span></p>
@@ -58,7 +66,10 @@
               </blockquote>
               <p class="best-photo__likes">Нравится: <span>215</span></p>
             </section>
-          </article>
+          </div>
+        </article>
+
+        <div class="photo-gallery__wrapper">
           <section class="photo-gallery__items">
             <h2 class="visually-hidden">Авторские описания фотографий</h2>
             <div class="photo-gallery__item">
@@ -112,34 +123,50 @@
           </section>
           <p class="photo-gallery__invocation">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
         </div>
+
         <article class="filter-labs">
           <h1 class="visually-hidden">Сделай фото еще круче!</h1>
-          <div class="filter-labs__inner">
-            <a href="#"><img src="img/photo-7-mobile@1x.jpg" width="280" height="374" alt="Фото пользователя" title="Фото пользователя"></a>
-          </div>
-          <form class="filter-labs__form" action="/" method="post">
-            <input type="radio" id="crop" name="filter" checked>
-            <input type="radio" id="fill" name="filter">
-            <input type="radio" id="contrast" name="filter">
-            <label class="filter-labs__crop  filter-labs__crop--active" for="crop" title="Кадрирование">Кадрирование
-              <img src="img/icon-editor-crop.svg" width="44" height="44" alt="Кадрирование">
-            </label>
-            <label class="filter-labs__fill" for="fill" title="Заливка">Заливка
-              <img src="img/icon-editor-fill.svg" width="48" height="43" alt="Заливка">
-            </label>
-            <label class="filter-labs__contrast" for="contrast" title="Контраст">Контраст
-              <img src="img/icon-editor-contrast.svg" width="32" height="32" alt="Контраст">
-            </label>
-            <div class="filter-labs__range">
-              <div class="filter-labs__bar"></div>
-              <div class="filter-labs__toggle"></div>
+          <div class="filter-labs__wrapper">
+            <div class="filter-labs__inner">
+              <a href="#"><img src="img/photo-7-mobile@1x.jpg" width="280" height="374" alt="Фото пользователя" title="Фото пользователя"></a>
             </div>
-            <!-- <input type="range" id="amount" name="amount" min="-50" max="50" value="0">
-            <label class="filter-labs__range" for="amount" title="Регулятор фильтра">Регулятор фильтра</label> -->
-            <button class="btn  btn--filter" type="submit" name="submit">Запостить</button>
-            <button class="btn  btn--filter  btn--filter-cancel" type="reset" name="reset">Отмена</button>
-          </form>
+            <form class="filter-labs__form" action="/" method="post">
+              <input type="radio" id="crop" name="filter" checked>
+              <input type="radio" id="fill" name="filter">
+              <input type="radio" id="contrast" name="filter">
+              <div class="filter-labs__icon-panel">
+                <label class="filter-labs__crop  filter-labs__crop--active" for="crop" title="Кадрирование">Кадрирование
+                  <img src="img/icon-editor-crop.svg" width="44" height="44" alt="Кадрирование">
+                </label>
+                <label class="filter-labs__fill" for="fill" title="Заливка">Заливка
+                  <img src="img/icon-editor-fill.svg" width="48" height="43" alt="Заливка">
+                </label>
+                <label class="filter-labs__contrast" for="contrast" title="Контраст">Контраст
+                  <img src="img/icon-editor-contrast.svg" width="32" height="32" alt="Контраст">
+                </label>
+              </div>
+              <div class="filter-labs__range-panel">
+                <div class="filter-labs__range  filter-labs__range--cropper">
+                  <div class="filter-labs__bar"></div>
+                  <div class="filter-labs__toggle  filter-labs__toggle--cropper"></div>
+                </div>
+                <div class="filter-labs__range  filter-labs__range--filler">
+                  <div class="filter-labs__bar"></div>
+                  <div class="filter-labs__toggle  filter-labs__toggle--filler"></div>
+                </div>
+                <div class="filter-labs__range  filter-labs__range--contraster">
+                  <div class="filter-labs__bar"></div>
+                  <div class="filter-labs__toggle  filter-labs__toggle--contraster"></div>
+                </div>
+              </div>
+              <div class="filter-labs__button-wrapper">
+                <button class="btn  btn--filter" type="submit" name="submit">Запостить</button>
+                <button class="btn  btn--filter  btn--filter-cancel" type="reset" name="reset">Отмена</button>
+              </div>
+            </form>
+          </div>
         </article>
+
       </article>
     </main>
     <footer class="page-footer">

@@ -1,24 +1,43 @@
-.best-photo__inner {
+.best-photo__wrapper {
+  .container();
   position: relative;
 }
 
 .best-photo__inner {
+  position: relative;
+  width: 100%;
+
   a {
     display: block;
     line-height: 0;
   }
 
   img {
-    height: 100%;
-    transform: translateX(-20px);
+    display: block;
+    height: 137px;
+    width: 320px;
+    margin: auto;
+
+    @media @tablet-width {
+      width: 660px;
+      height: 509px;
+    }
+
+    @media @desktop-width {
+      width: 960px;
+      height: 506px;
+    }
   }
 }
 
 .best-photo__tag {
   position: absolute;
-  top: 0;
+  top: -137px;
   right: 0;
+  z-index: 10;
   padding: 6px 20px;
+  // margin-right: 6.6%;
+  margin-right: 20px;
   font-size: 12px;
   font-weight: @font-weight--bold;
   line-height: @line-height;
@@ -26,16 +45,44 @@
   text-align: center;
   color: @color--invert;
   background-color: #d22856;
+
+  @media @tablet-width {
+    top: -509px;
+    //margin-right: 3%;
+    margin-right: 20px;
+    margin-top: 57px;
+  }
+
+  @media @desktop-width {
+    top: -506px;
+    //margin-right: 1%;
+    margin-right: 10px;
+    margin-top: 55px;
+  }
 }
 
 .best-photo__post {
   padding: 18px 15px 20px 15px;
+  //margin-top: 1px;
   margin-bottom: 20px;
   background-color: @bg--grey;
+
+  @media @tablet-width {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 24px 28px 16px 27px;
+    margin-bottom: 50px;
+  }
 
   blockquote {
     margin-bottom: 10px;
     line-height: @line-height;
+
+    @media @tablet-width {
+      order: 2;
+      width: 100%;
+    }
   }
 }
 
@@ -43,6 +90,15 @@
   padding-bottom: 2px;
   font-weight: @font-weight--bold;
   line-height: @line-height;
+
+  @media @tablet-width {
+    width: 50%;
+    margin-right: auto;
+  }
+
+  @media @desktop-width {
+    padding-bottom: 0;
+  }
 
   span {
     font-size: @font-size - 2px;
@@ -58,6 +114,13 @@
   text-transform: uppercase;
   color: @color--highlighted;
 
+  @media @tablet-width {
+    width: 200px;
+    padding-left: 0;
+    padding-right: 31px;
+    text-align: right;
+  }
+
   &::before {
     position: absolute;
     top: 7px;
@@ -67,5 +130,26 @@
     width: 13px;
     height: 12px;
     background: url(../img/icon-heart.svg) no-repeat 0 0 transparent;
+
+    @media @tablet-width {
+      left: 187px;
+    }
   }
 }
+
+/* &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "Панорама дня";
+      min-width: 140px;
+      min-height: 37px;
+      padding: 6px 20px;
+      font-size: 12px;
+      font-weight: @font-weight--bold;
+      line-height: @line-height;
+      text-transform: uppercase;
+      text-align: center;
+      color: @color--invert;
+      background-color: #d22856;
+    } */
