@@ -100,6 +100,15 @@
     text-decoration: underline;
     color: @color--highlighted;
 
+    &:hover {
+      text-decoration: none;
+      color: @color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     @media @desktop-width {
       font-size: @font-size--big;
       line-height: @line-height--loose;

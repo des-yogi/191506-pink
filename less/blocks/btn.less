@@ -6,6 +6,7 @@
   font-weight: @font-weight--bold;
   line-height: 1;
   text-align: center;
+  text-decoration: none;
   color: @color--invert;
 
   &--download {
@@ -21,28 +22,46 @@
     @media @desktop-width {
       margin-bottom: 67px;
     }
+
+    &:hover {
+      color: @color--highlighted;
+      background-color: @bg;
+    }
+
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
+    }
   }
 
   &--toggler {
+    box-sizing: content-box;
     font-size: 0;
-    width: 12px;
-    height: 12px;
+    width: 6px;
+    height: 6px;
     padding: 0;
     margin: 0 5px;
     background-color: @bg--darkblue;
-    border: 3px solid #fff;
+    border: 3px solid @bg;
     border-radius: 50%;
+    opacity: 0.3;
     cursor: pointer;
 
-    &:hover,
-    &:focus {
-      background-color: @bg;
-      border: 3px solid @bg--darkblue;
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
     }
 
     &.active {
       background-color: @bg;
       border: 3px solid @bg--darkblue;
+      opacity: 1;
+    }
+
+    @media @desktop-width {
+      display: none;
     }
   }
 
@@ -51,23 +70,40 @@
   }
 
   &--filter {
+    text-decoration: none;
     color: @color--highlighted;
     background-color: transparent;
     border: 3px solid @color--highlighted;
     border-radius: 50px;
 
     &:hover,
-    &:focus {
+    &:active {
       color: @color--invert;
       background-color: @color--highlighted;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 
    &--filter-cancel {
     margin-top: 10px;
-    border: 3px solid @color;
     color: @color;
+    background-color: @bg;
+    border: 3px solid @color;
     opacity: 0.1;
+
+    &:hover {
+      color: @color;
+      background-color: @bg;
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: @bg--darkblue;
+    }
 
     @media @tablet-width {
       margin-top: 20px;
@@ -77,17 +113,29 @@
       margin-top: 0;
       margin-left: 45px;
     }
-
-    &:hover,
-    &:focus {}
   }
 
   &--form {
     width: 100%;
     padding: 21px 10px;
     text-transform: uppercase;
+    text-decoration: none;
     background-color: #2aab6d;
     border: 2px solid #2aab6d;
     border-radius: 3px;
+
+    &:hover {
+      background-color: #1c9b5e;
+      border-color: #1c9b5e;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:disabled {
+      background-color: #e5e5e5;
+      border-color: #e5e5e5;
+    }
   }
 }

@@ -40,34 +40,6 @@
     background-repeat: no-repeat;
     background-size: 79px 63px;
     background-position: 50% 72px;
-
-    &::before {
-      position: absolute;
-      top: 213px;
-      left: 15px;
-      content: "";
-      width: 31px;
-      height: 31px;
-      border-top: 3px solid @color;
-      border-left: 3px solid @color;
-      transform: rotate(-45deg);
-      opacity: 0.3;
-      cursor: pointer;
-    }
-
-    &::after {
-      position: absolute;
-      top: 213px;
-      right: 15px;
-      content: "";
-      width: 31px;
-      height: 31px;
-      border-top: 3px solid @color;
-      border-right: 3px solid @color;
-      transform: rotate(45deg);
-      opacity: 0.3;
-      cursor: pointer;
-    }
   }
 }
 
@@ -138,13 +110,50 @@
 }
 
 .review__toggle {
+  position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
   min-height: 12px;
   margin-bottom: 4px;
+}
+
+.review__prev,
+.review__next {
+  display: none;
 
   @media @desktop-width {
-    display: none;
+    display: block;
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    background-color: @bg;
+    border: none;
+    border-top: 3px solid @color;
+    border-left: 3px solid @color;
+    opacity: 0.3;
+    cursor: pointer;
   }
+}
+
+.review__prev {
+  top: -190px;
+  left: 6px;
+  transform: rotate(-45deg);
+}
+
+.review__next {
+  top: -190px;
+  right: 6px;
+  transform: rotate(135deg);
+}
+
+.review__prev:hover,
+.review__next:hover {
+  opacity: 0.6;
+}
+
+.review__prev:active,
+.review__next:active {
+  opacity: 0.1;
 }

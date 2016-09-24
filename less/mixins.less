@@ -39,6 +39,19 @@
   }
 }
 
+.input-style() {
+
+  &:hover {
+    border-color: @color;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: @color--highlighted;
+  }
+}
+
  /*.full-width() {
   width: 100vw;
   position: relative;
