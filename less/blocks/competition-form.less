@@ -113,11 +113,8 @@
 
   @media @desktop-width {
     max-width: 50%;
-    width: 460px;
     padding-left: 10px;
     margin: 0;
-    margin-right: auto;
-    //margin-top: auto;
 
     input {
       margin-bottom: 55px;
@@ -362,14 +359,14 @@
     padding-right: 60px;
     border: 2px solid @border-color;
 
-    input[name="phone-number"] {
+    .competition-form__phone-number {
       order: 0;
       margin-bottom: 9px;
       padding-right: 70px;
       background: url(../img/icon-phone.svg) no-repeat right center;
     }
 
-    input[name="email"] {
+    .competition-form__email {
       order: 2;
       margin-bottom: 9px;
       padding-right: 70px;
@@ -382,12 +379,12 @@
     flex-wrap: wrap;
     padding-bottom: 13px;
 
-    input[name="phone-number"] {
+    .competition-form__phone-number {
       order: -1;
       margin-right: 70px;
     }
 
-    input[name="email"] {
+    .competition-form__email {
       order: 0;
     }
   }
