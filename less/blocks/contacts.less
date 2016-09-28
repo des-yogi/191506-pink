@@ -34,18 +34,16 @@
 }
 
 .contacts__inner {
-  .container();
   margin-bottom: 10px;
 
   @media @tablet-width {
     display: flex;
     flex-wrap: wrap;
-    background: url();
   }
 }
 
 .contacts__question {
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   font-size: @font-size--biggest;
   font-weight: @font-weight--light;
   line-height: @line-height--auto;
@@ -64,7 +62,7 @@
 
 .contacts__call,
 .contacts__write {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 
   @media @tablet-width {
     width: 50%;
@@ -76,6 +74,10 @@
   }
 }
 
+.contacts__write {
+  margin-bottom: 22px;
+}
+
 .contacts__call,
 .contacts__write,
 .contacts__come {
@@ -85,7 +87,7 @@
     font-weight: @font-weight--bold;
 
     @media @desktop-width {
-      margin-bottom: 22px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -118,6 +120,10 @@
 
 .contacts__come {
   margin-bottom: 40px;
+
+  p {
+    margin-bottom: 3px;
+  }
 
   @media @tablet-width {
     width: 100%;

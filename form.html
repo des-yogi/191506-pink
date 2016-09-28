@@ -11,12 +11,12 @@
       <nav class="main-nav  main-nav--closed  main-nav--nojs">
         <div class="main-nav__inner">
           <div class="main-nav__logo  main-nav__logo--nojs">
-            <div class="page-header__inner">
+            <div class="page-header__inner container">
               <a href="index.html">
                 <picture>
                   <source media="(min-width: 960px)" srcset="img/logo-pink-color-desktop.svg">
                   <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-                  <img src="img/logo-pink-white-mobile.svg" width="75" height="21" alt="Pink logo" title="Логотип Пинк">
+                  <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink logo" title="Логотип Пинк">
                 </picture>
               </a>
               <button class="main-nav__toggle  main-nav__toggle--closed  main-nav__toggle--open" type="button" title="Кнопка меню">Открыть меню</button>
@@ -38,69 +38,84 @@
           </ul>
         </div>
       </nav>
-      <h1 class="page-header__title  page-header__title--form-page">Конкурс на самое безбашеное путешествие с Пинк</h1>
+      <div class="container">
+        <h1 class="page-header__title  page-header__title--form-page">Конкурс на самое безбашеное путешествие с Пинк</h1>
+      </div>
     </header>
     <main>
       <article class="competition-form">
-        <h1 class="visually-hidden">Конкурс для наших пользователей</h1>
+        <h2 class="visually-hidden">Конкурс для наших пользователей</h2>
+        <div class="container">
+          <p class="competition-form__intro">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
+        </div>
+
         <form action="/echo" method="post">
           <div class="competition-form__wrapper">
-            <p class="competition-form__note">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
 
-            <section class="competition-form__full-name">
-              <h2 class="visually-hidden">Полное имя конкурсанта</h2>
-              <label class="competition-form__caption" for="second-name">Фамилия:</label>
-              <input id="second-name" type="text" name="second-name" placeholder="Укажите фамилию" required>
-              <label class="competition-form__caption" for="name">Имя:</label>
-              <input id="name" type="text" name="name" placeholder="Введите имя" required>
-              <label class="competition-form__caption" for="patronymic">Отчество:</label>
-              <input id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
-            </section>
+              <section class="form-full-name container">
+                <h2 class="visually-hidden">Полное имя конкурсанта</h2>
+                <div class="form-full-name__field">
+                  <label class="form-full-name__title" for="second-name">Фамилия:</label>
+                  <input id="second-name" type="text" name="second-name" placeholder="Укажите фамилию" required>
+                </div>
+                <div class="form-full-name__field">
+                  <label class="form-full-name__title" for="name">Имя:</label>
+                  <input id="name" type="text" name="name" placeholder="Введите имя" required>
+                </div>
+                <div class="form-full-name__field">
+                  <label class="form-full-name__title" for="patronymic">Отчество:</label>
+                  <input id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+                </div>
+              </section>
 
-            <section class="competition-form__achievements">
+            <section class="form-achievements">
               <h2 class="visually-hidden">Ваши достижения</h2>
-              <div class="competition-form__inner">
+              <div class="form-achievements__inner  container">
                 <p>Ваши безбашенные <br>достижения в путешествии</p>
-                <div class="competition-form__input-inner">
+                <div class="form-achievements__field">
                   <input id="selfie" type="checkbox" name="selfie" checked>
                   <label for="selfie">Сделал селфи с акулой</label>
                 </div>
-                <div class="competition-form__input-inner">
+                <div class="form-achievements__field">
                   <input id="burned" type="checkbox" name="burned" checked>
                   <label for="burned">Обгорел на пляже</label>
                 </div>
-                <div class="competition-form__input-inner">
+                <div class="form-achievements__field">
                   <input id="seen-сhuck" type="checkbox" name="seen-сhuck">
                   <label for="seen-сhuck">Видел Чака Норриса</label>
                 </div>
-                <div class="competition-form__input-inner">
+                <div class="form-achievements__field">
                   <input id="souvenirs" type="checkbox" name="souvenirs">
                   <label for="souvenirs">Накупил сувениров</label>
                 </div>
-                <div class="competition-form__input-inner">
+                <div class="form-achievements__field">
                   <input id="tower" type="checkbox" name="tower" checked>
                   <label for="tower">Удержал башню</label>
                 </div>
-                <div class="competition-form__input-inner">
+                <div class="form-achievements__field">
                   <input id="hotel" type="checkbox" name="hotel">
                   <label for="hotel">Разгромил отель</label>
                 </div>
               </div>
             </section>
 
-            <section class="competition-form__communications">
-              <div class="competition-form__communications-inner">
-                <h2 class="competition-form__title-hidden">Контактная информация</h2>
-                <label class="competition-form__caption  competition-form__caption--phone" for="phone-number">Номер<span>ок</span> телефон<span>чик</span>а</label>
-                <input class="competition-form__phone-number" id="phone-number" type="tel" name="phone-number" placeholder="Номер, пожалуйста" required>
-                <label class="competition-form__caption  competition-form__caption--email" for="email">Адрес<span>ок</span> почты</label>
-                <input class="competition-form__email" id="email" type="email" name="email" placeholder="Введите почту" required>
+            <section class="form-contacts  container">
+              <div class="form-contacts__inner">
+                <h2 class="form-contacts__title-hidden">Контактная информация</h2>
+                <div class="form-contacts__field">
+                  <label class="form-contacts__title  form-contacts__title--phone" for="phone-number">Номер<span>ок</span> телефон<span>чик</span>а</label>
+                  <input class="form-contacts__phone-number" id="phone-number" type="tel" name="phone-number" placeholder="Номер, пожалуйста" required>
+                </div>
+                <div class="form-contacts__field">
+                  <label class="form-contacts__title  form-contacts__title--email" for="email">Адрес<span>ок</span> почты</label>
+                  <input class="form-contacts__email" id="email" type="email" name="email" placeholder="Введите почту" required>
+                </div>
               </div>
             </section>
 
-            <section class="competition-form__mobile-app">
+            <section class="form-mobile-app">
               <h2 class="visually-hidden">Какое мобильное приложение использовано</h2>
-              <div class="competition-form__mobile-inner">
+              <div class="form-mobile-app__inner">
                 <p>С каким приложением<br> путешествовали?</p>
                 <input id="ios" type="radio" name="app" checked>
                 <label for="ios">Pink для iOS</label>
@@ -111,15 +126,15 @@
               </div>
             </section>
 
-            <section class="competition-form__emotions">
-              <div class="competition-form__emotions-inner">
+            <section class="form-comment container">
+              <div class="form-comment__inner">
                 <h2 class="visually-hidden">Описание ваших эмоций</h2>
-                <p class="competition-form__caption">Опишите свои эмоции</p>
+                <p class="form-comment__title">Опишите свои эмоции</p>
                 <textarea name="emotions" maxlength="500" required>Можно прям в красках, не стесняясь в выражениях</textarea>
               </div>
             </section>
 
-            <div class="competition-form__send-form">
+            <div class="competition-form__send-form  container">
               <button class="btn  btn--form" type="submit" name="submit">Отправить форму</button>
               <p><span class="competition-form__asterisk">*</span> - обязательные <span class="competition-form__text">для заполнения </span>поля</p>
             </div>
@@ -127,6 +142,7 @@
         </form>
       </article>
     </main>
+
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer__inner">
