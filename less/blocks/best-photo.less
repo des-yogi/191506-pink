@@ -1,23 +1,46 @@
-.best-photo__inner {
+/* .best-photo__wrapper {
+  .container();
   position: relative;
-}
+} */
 
 .best-photo__inner {
+  position: relative;
+  width: 100%;
+
   a {
-  display: block;
-  line-height: 0;
+    display: block;
+    line-height: 0;
   }
 
   img {
-    height: 100%;
-    transform: translateX(-20px);
+    display: block;
+    height: auto;
+    //height: 137px;
+    width: 100%;
+    //width: 320px;
+    margin: auto;
+
+    @media @tablet-width {
+      //width: 660px;
+      //height: 509px;
+    }
+
+    @media @desktop-width {
+      //width: 960px;
+      //height: 506px;
+    }
   }
 }
 
+/* .best-photo__container {
+  position: relative;
+}
+ */
 .best-photo__tag {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 20px;
+  z-index: 10;
   padding: 6px 20px;
   font-size: 12px;
   font-weight: @font-weight--bold;
@@ -26,23 +49,54 @@
   text-align: center;
   color: @color--invert;
   background-color: #d22856;
+
+  @media @tablet-width {
+    top: 57px;
+  }
+
+  @media @desktop-width {
+    top: 55px;
+    right: 10px;
+  }
 }
 
 .best-photo__post {
   padding: 18px 15px 20px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   background-color: @bg--grey;
+
+  @media @tablet-width {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 24px 28px 16px 27px;
+    margin-bottom: 50px;
+  }
 
   blockquote {
     margin-bottom: 10px;
     line-height: @line-height;
+
+    @media @tablet-width {
+      order: 2;
+      width: 100%;
+    }
   }
 }
 
 .best-photo__text {
-  padding-bottom: 2px;
+  //margin-bottom: 0;
   font-weight: @font-weight--bold;
   line-height: @line-height;
+
+  @media @tablet-width {
+    width: 50%;
+    margin-right: auto;
+  }
+
+  @media @desktop-width {
+    padding-bottom: 0;
+  }
 
   span {
     font-size: @font-size - 2px;
@@ -53,19 +107,30 @@
 
 .best-photo__likes {
   position: relative;
-  padding-left: 30px;
+  padding-left: 34px;
   font-size: @font-size - 2px;
   text-transform: uppercase;
   color: @color--highlighted;
 
+  @media @tablet-width {
+    width: 200px;
+    padding-left: 0;
+    padding-right: 31px;
+    text-align: right;
+  }
+
   &::before {
     position: absolute;
-    top: 7px;
-    left: 0;
+    top: 9px;
+    left: 3px;
     content: "";
     display: block;
     width: 13px;
     height: 12px;
     background: url(../img/icon-heart.svg) no-repeat 0 0 transparent;
+
+    @media @tablet-width {
+      left: 187px;
+    }
   }
 }

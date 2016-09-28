@@ -8,7 +8,72 @@
 
 .container() {
   width: 320px;
+  padding: 0 20px;
   margin: auto;
 
-  // outline: 1px solid red;
+  @media @tablet-width {
+    width: 660px;
+    margin: auto;
+  }
+
+  @media @desktop-width {
+    width: 960px;
+    padding: 0 10px;
+    margin: auto;
+  }
 }
+
+.container-deny() {
+  width: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.padding-lr() {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media @desktop-width {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.input-style() {
+
+  &:hover {
+    border-color: @color;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: @color--highlighted;
+  }
+}
+
+.form-caption() {
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  padding: 0 25px;
+  white-space: nowrap;
+}
+
+ /*.full-width() {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-left: calc(-100vw / 2 + 320px / 2);
+  margin-right: calc(-100vw / 2 + 320px / 2);
+}*/
+
+/* .full-width-cancel() {
+  width: auto;
+  position: static;
+  margin: 0;
+}
+ */

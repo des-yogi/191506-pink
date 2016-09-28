@@ -1,0 +1,121 @@
+.form-mobile-app {
+  background-color: @bg--grey;
+  padding-bottom: 4px;
+
+  @media @tablet-width {
+    .container();
+    order: 1;
+    padding-bottom: 35px;
+    background-color: white;
+  }
+
+  @media @desktop-width {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.form-mobile-app__inner {
+  .container();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-between;
+  margin-bottom: 45px;
+
+  @media @tablet-width {
+    position: relative;
+    .container-deny();
+    padding-top: 55px;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border: 2px solid @border-color;
+  }
+
+  @media @desktop-width {
+    width: 440px;
+    margin-left: auto;
+    margin-right: 0;
+    padding-left: 74px;
+  }
+
+  p {
+    width: 100%;
+    padding: 36px 0 38px 0;
+    text-align: center;
+    line-height: @font-size--big;
+    text-transform: uppercase;
+    color: @color--highlighted;
+
+    @media @tablet-width {
+      position: absolute;
+      top: -10px;
+      .form-caption();
+      /* left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      padding: 0 25px;
+      white-space: nowrap; */
+      background-color: white;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  input[type=radio] {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    padding-left: 70px;
+    padding-bottom: 45px;
+    font-size: @font-size--big;
+    line-height: @line-height--loose;
+    cursor: pointer;
+
+    @media @tablet-width {
+      width: 70%;
+    }
+
+    &::before {
+      position: absolute;
+      top: -3px;
+      left: 0;
+      content: "";
+      width: 39px;
+      height: 39px;
+      background-color: white;
+      border: 2px solid @border-color;
+      border-radius: 50%;
+    }
+
+    &:hover::before {
+      border-color: #283645;
+    }
+
+    &:active::before {
+      border-color: #d22856;
+    }
+  }
+}
+
+.form-mobile-app__inner:last-child {
+  margin-bottom: 0;
+}
+
+.form-mobile-app__inner input:checked + label::after {
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: @color--highlighted;
+  border-radius: 50%;
+}
