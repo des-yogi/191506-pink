@@ -11,10 +11,18 @@
     background: url(../img/map-marker.svg) no-repeat 50% 57.5%,
                 url(../img/bg-map-mobile@1x.jpg) no-repeat 50% 50% #eae6dd;
     background-size: 36px 35px, cover;
+
+    @media @tablet-width {
+      background-position: 50% 58%, 50% 56%;
+    }
+
+    @media @desktop-width {
+      background-position: 50% 54.5%, 50% 56%;
+    }
   }
 
   @media @tablet-width {
-    height: 378px;
+    height: 380px;
   }
 
   @media @desktop-width {
