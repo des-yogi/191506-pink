@@ -14,7 +14,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 39px;
 
   @media @tablet-width {
     flex-direction: row;
@@ -45,7 +45,7 @@
 .page-footer__copyrights {
   a {
     display: flex;
-    margin-left: 15px;
+    //margin-left: 5px;
     align-items: center;
     line-height: 18px;
     text-decoration: none;
@@ -68,5 +68,10 @@
 
   @media @tablet-width {
     margin-top: 14px;
+  }
+
+  @media @desktop-width {
+    margin-top: 12px;
+    font-size: @font-size--big;
   }
 }

@@ -22,12 +22,12 @@
 
     @media @tablet-width {
       //width: 660px;
-      //height: 509px;
+      min-height: 509px;
     }
 
     @media @desktop-width {
       //width: 960px;
-      //height: 506px;
+      min-height: 506px;
     }
   }
 }
@@ -61,7 +61,7 @@
 }
 
 .best-photo__post {
-  padding: 18px 15px 20px 15px;
+  padding: 19px 15px 20px 15px;
   margin-bottom: 21px;
   background-color: @bg--grey;
 
@@ -69,8 +69,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 24px 28px 16px 27px;
+    padding: 24px 28px 14px 27px;
     margin-bottom: 50px;
+  }
+
+  @media @desktop-width {
+    margin-bottom: 48px;
   }
 
   blockquote {
@@ -130,7 +134,8 @@
     background: url(../img/icon-heart.svg) no-repeat 0 0 transparent;
 
     @media @tablet-width {
-      left: 187px;
+      top: 6px;
+      left: 186px;
     }
   }
 }

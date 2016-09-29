@@ -36,10 +36,11 @@
   }
 
   @media @desktop-width {
-    width: 440px;
-    margin-left: auto;
+    //width: 440px;
+    margin-left: 35px;
     margin-right: 0;
-    padding-left: 74px;
+    padding-top: 57px;
+    padding-left: 78px;
   }
 
   p {
@@ -81,12 +82,13 @@
 
     @media @tablet-width {
       width: 70%;
+      padding-left: 57px;
     }
 
     &::before {
       position: absolute;
       top: -3px;
-      left: 0;
+      left: -3px;
       content: "";
       width: 39px;
       height: 39px;
@@ -112,7 +114,7 @@
 .form-mobile-app__inner input:checked + label::after {
   position: absolute;
   top: 9px;
-  left: 12px;
+  left: 9px;
   content: "";
   width: 15px;
   height: 15px;
