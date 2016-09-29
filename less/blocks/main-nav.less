@@ -35,32 +35,123 @@
     border-bottom: 1px solid black;
   }
 
-  img {
-    width: 75px;
-    height: 22px;
+/*   img {
+  width: 75px;
+  height: 22px;
 
-    @media @tablet-width {
-      width: 147px;
-      height: 40px;
-    }
-
-    @media @desktop-width {
-      width: 147px;
-      height: 40px;
-    }
+  @media @tablet-width {
+    width: 147px;
+    height: 40px;
   }
+
+  @media @desktop-width {
+    width: 147px;
+    height: 40px;
+  }
+} */
 
   @media @tablet-width {
     min-height: 110px;
-    padding-top: 13px;
+    padding-top: 7px;
   }
 
   @media @desktop-width {
     padding-left: 0;
     padding-right: 80px;
     background-color: transparent;
+    border-bottom: none;
   }
 }
+
+.fill-white {
+  fill: white;
+}
+
+.fill-pink {
+  fill: @color--highlighted;
+}
+
+.main-nav__logo-desktop {
+  display: none;
+
+  @media @desktop-width {
+    display: block;
+    width: 147px;
+    height: 40px;
+
+    /* &:hover {
+      fill: @color--highlighted;
+    } */
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.main-nav__logo-desktop:hover {
+
+  .fill-white,
+  .fill-pink {
+    fill: @color--highlighted;
+  }
+}
+
+.main-nav__logo-tablet {
+  display: none;
+
+  @media @tablet-width {
+    display: block;
+    width: 147px;
+    height: 40px;
+    fill: @color--invert;
+
+    &:hover {
+    fill: @color--highlighted;
+    }
+
+    &:active {
+      fill: @color--invert;
+      opacity: 0.3;
+    }
+  }
+
+  @media @desktop-width {
+    display: none;
+  }
+}
+
+.main-nav__logo-mobile {
+  width: 75px;
+  height: 22px;
+  fill: white;
+
+  &:hover {
+    fill: @color--highlighted;
+  }
+
+  &:active {
+    fill: @color--invert;
+    opacity: 0.3;
+  }
+
+  @media @tablet-width {
+    display: none;
+  }
+}
+
+/* .main-nav__logo-desktop:hover,
+.main-nav__logo-tablet:hover,
+.main-nav__logo-mobile:hover {
+  fill: @color--highlighted;
+}
+
+.main-nav__logo-desktop:active,
+.main-nav__logo-tablet:active,
+.main-nav__logo-mobile:active {
+  fill: @color--invert;
+  opacity: 0.3;
+} */
 
 .main-nav__toggle {
   float: right;

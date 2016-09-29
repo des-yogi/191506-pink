@@ -3,7 +3,14 @@
   padding-top: 396px;
   background: url(../img/iphone-hand-mobile@1x.png) no-repeat;
   background-size: 258px 286px;
-  background-position: 0 112px;
+  background-position: 0 113px;
+
+  @media (min-resolution: 200dpi),
+         (min-resolution: 2dppx) {
+    background: url(../img/iphone-hand-mobile@2x.png) no-repeat;
+    background-size: 258px 286px;
+    background-position: 0 113px;
+  }
 
   @media @tablet-width {
     display: flex;
@@ -12,15 +19,24 @@
     min-height: 620px;
     padding-top: 93px;
     background: url(../img/iphone-hand-tablet@1x.png) no-repeat;
-    background-position: 170px bottom;
-    background-size: 467px 545px;
+    background-position: -20px bottom;
+    background-size: 700px 545px;
+  }
+
+  @media @tablet-width and
+          (min-resolution: 200dpi),
+          (min-resolution: 2dppx) {
+    background: url(../img/iphone-hand-tablet@2x.png) no-repeat;
+    background-position: -20px bottom;
+    background-size: 700px 545px;
   }
 
   @media @desktop-width {
     min-height: 743px;
     padding-top: 107px;
     background: url(../img/iphone-hand-desktop@1x.png) no-repeat;
-    background-position: 355px bottom;
+    background-position: 25px bottom;
+    background-size: 1050px 645px;
   }
 }
 
