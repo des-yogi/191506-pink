@@ -1,3 +1,74 @@
+.form-comment {
+  padding-top: 50px;
+  padding-bottom: 40px;
+
+  @media @tablet-width {
+    order: 4;
+    padding-top: 52px;
+    margin-bottom: 11px;
+  }
+
+  @media @desktop-width {
+    width: 100%;
+    padding: 0;
+  }
+
+  p {
+    padding: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  textarea {
+    .input-style();
+    width: 100%;
+    height: 201px;
+    padding: 15px 20px;
+    font-size: @font-size--big;
+    line-height: @line-height--loose;
+    border: 2px solid @border-color;
+
+    @media @tablet-width {
+      height: 192px;
+      padding-top: 14px;
+      padding-left: 17px;
+    }
+
+    @media @desktop-width {
+      height: 128px;
+    }
+  }
+}
+
+.form-comment__inner {
+
+  @media @tablet-width {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 44px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border: 2px solid @border-color;
+
+    p {
+      position: absolute;
+      top: -16px;
+      .form-caption();
+      background-color: white;
+    }
+  }
+
+  @media @tablet-width {
+    padding-top: 45px;
+  }
+
+  @media @desktop-width {
+    padding-top: 42px;
+    padding-bottom: 35px;
+    margin-bottom: 38px;
+  }
+}
+
 .form-comment__title {
   display: block;
   padding-left: 23px;
@@ -40,69 +111,5 @@
       padding-left: 55px;
       margin-bottom: 0;
     }
-  }
-}
-
-.form-comment {
-  padding-top: 50px;
-  padding-bottom: 39px;
-
-  @media @tablet-width {
-    order: 4;
-    margin-bottom: 14px;
-  }
-
-  @media @desktop-width {
-    width: 100%;
-    padding: 0;
-  }
-
-  p {
-    padding: 0;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  textarea {
-    .input-style();
-    width: 100%;
-    height: 201px;
-    padding: 20px 20px;
-    font-size: @font-size--big;
-    line-height: @line-height--loose;
-    border: 2px solid @border-color;
-
-    @media @tablet-width {
-      height: 190px;
-    }
-
-    @media @desktop-width {
-      height: 128px;
-    }
-  }
-}
-
-.form-comment__inner {
-
-  @media @tablet-width {
-    position: relative;
-    padding-top: 46px;
-    padding-bottom: 45px;
-    padding-left: 60px;
-    padding-right: 60px;
-    border: 2px solid @border-color;
-
-    p {
-      position: absolute;
-      top: -16px;
-      .form-caption();
-      background-color: white;
-    }
-  }
-
-  @media @desktop-width {
-    padding-top: 42px;
-    padding-bottom: 35px;
-    margin-bottom: 35px;
   }
 }

@@ -2,6 +2,15 @@
   padding-top: 90px;
   padding-bottom: 47px;
   background-color: @bg--grey;
+
+  @media @tablet-width {
+    padding-top: 87px;
+  }
+
+  @media @desktop-width {
+    padding-top: 140px;
+    padding-bottom: 68px;
+  }
 }
 
 .price__table {
@@ -12,6 +21,7 @@
 
   @media @tablet-width {
     padding: 0 20px;
+    margin-bottom: 26px;
   }
 
   @media @desktop-width {
@@ -142,7 +152,15 @@
       @media @tablet-width {
         width: 60px;
         height: 60px;
+        background: url(../img/bg-hit-tablet.svg) no-repeat 0 0;
         background-size: 60px 60px;
+      }
+
+      @media @desktop-width {
+        width: 74px;
+        height: 73px;
+        background: url(../img/bg-hit.svg) no-repeat 0 0;
+        background-size: 74px 73px;
       }
     }
 
@@ -157,8 +175,13 @@
       transform: rotate(-45deg);
 
       @media @tablet-width {
-        top: 7px;
-        left: 6px;
+        top: 6px;
+        left: 5px;
+      }
+
+      @media @desktop-width {
+        top: 13px;
+        left: 9px;
       }
     }
 
@@ -171,6 +194,11 @@
     padding-left: 15px;
     text-transform: none;
 
+    @media @tablet-width {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
     @media @desktop-width {
       padding-left: 22px;
       padding-top: 16px;
@@ -181,6 +209,22 @@
 
   @media @tablet-width {
     width: 25%;
+
+    &--hit,
+    &--caption,
+    &--null {
+      padding-top: 10px;
+      padding-bottom: 8px;
+    }
+  }
+
+  @media @desktop-width {
+    &--hit,
+    &--caption,
+    &--null {
+      padding-top: 16px;
+      padding-bottom: 20px;
+    }
   }
 }
 

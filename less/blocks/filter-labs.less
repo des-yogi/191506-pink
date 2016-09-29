@@ -6,8 +6,24 @@
   background-color: @bg--grey;
 
   @media @tablet-width {
-    padding-top: 57px;
+    padding-top: 56px;
     padding-bottom: 54px;
+  }
+
+  @media @desktop-width {
+
+    .container {
+      padding: 0;
+      width: auto;
+    }
+
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 56px;
+    padding-bottom: 57px;
+    margin: auto;
+    margin-bottom: 28px;
   }
 }
 
@@ -27,7 +43,7 @@
   }
 
   @media @desktop-width {
-    margin-left: 80px;
+    margin-left: 70px;
   }
 
   img {
@@ -59,7 +75,7 @@
   @media @desktop-width {
     align-content: space-between;
     //width: 410px;
-    padding-right: 60px;
+    padding-right: 50px;
     padding-left: 0;
   }
 }
@@ -103,7 +119,7 @@
   }
 
   @media @desktop-width {
-    margin-top: 0;
+    margin-top: -3px;
   }
 }
 
@@ -139,8 +155,10 @@
   }
 
   @media @desktop-width {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
+    padding-right: 7px;
+    padding-bottom: 4px;
   }
 }
 
@@ -156,6 +174,8 @@
   @media @desktop-width {
     width: 52px;
     height: 48px;
+    padding-right: 7px;
+    padding-bottom: 5px;
   }
 }
 
@@ -171,6 +191,8 @@
   @media @desktop-width {
     width: 32px;
     height: 32px;
+    padding-right: 3px;
+    padding-bottom: 7px;
   }
 }
 
@@ -197,7 +219,7 @@
     width: 202px;
     margin-left: auto;
     margin-right: 18px;
-    margin-bottom: 59px;
+    margin-bottom: 57px;
   }
 
   @media @desktop-width {
@@ -273,6 +295,21 @@
       left: 47%;
     }
   }
+
+  @media @desktop-width {
+
+    &--cropper {
+      left: 24.5%;
+    }
+
+    &--filler {
+      left: 85.7%;
+    }
+
+    &--contraster {
+      left: 55.5%;
+    }
+  }
 }
 
 .filter-labs__button-wrapper {
@@ -280,12 +317,27 @@
   flex-direction: column;
   width: 100%;
 
+  @media @tablet-width {
+    padding-right: 13px;
+    padding-left: 2px;
+
+    button:first-child {
+      margin-bottom: 4px;
+    }
+  }
+
   @media @desktop-width {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
+    padding-left: 0;
 
     button {
       min-width: 183px;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
