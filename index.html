@@ -149,16 +149,36 @@
             </section>
             <div class="info__images">
               <div class="info__image">
-                <img src="img/iphone-screen-1-desktop@1x.png" width="294" height="301" alt="Смартфон с эконом-пакетом">
-              </div>
-              <div class="info__image">
-                <img src="img/iphone-screen-2-desktop@1x.png" width="294" height="301" alt="Смартфон со стандартным пакетом">
+                <picture>
+                  <source media="(min-width: 960px)"
+                  srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
+                  <source media="(min-width: 660px)"
+                  srcset="img/iphone-screen-1-tablet@1x.png 1x,
+                  img/iphone-screen-1-tablet@2x.png 2x">
+                  <img src="img/iphone-screen-1-tablet@1x.png" srcset="img/iphone-screen-1-tablet@1x.png 1x,
+                  img/iphone-screen-1-tablet@2x.png 2x" width="294" height="301" alt="Смартфон с базовым пакетом">
+                </picture>
               </div>
               <div class="info__image">
                 <picture>
-                  <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png">
-                  <source media="(min-width: 660px)" srcset="img/iphone-screen-tablet@1x.png">
-                  <img src="img/iphone-screen-mobile@1x.png" width="157" height="277" alt="Смартфон с полным пакетом">
+                  <source media="(min-width: 960px)"
+                  srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
+                  <source media="(min-width: 660px)"
+                  srcset="img/iphone-screen-2-tablet@1x.png 1x,
+                  img/iphone-screen-2-tablet@2x.png 2x">
+                  <img src="img/iphone-screen-2-tablet@1x.png" srcset="img/iphone-screen-2-tablet@1x.png 1x,
+                  img/iphone-screen-2-tablet@2x.png 2x" width="294" height="301" alt="Смартфон со стандартным пакетом">
+                </picture>
+              </div>
+              <div class="info__image">
+                <picture>
+                  <source media="(min-width: 960px)"
+                  srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+                  <source media="(min-width: 660px)"
+                  srcset="img/iphone-screen-3-tablet@1x.png 1x,
+                  img/iphone-screen-3-tablet@2x.png 2x">
+                  <img src="img/iphone-screen-3-mobile@1x.png" srcset="img/iphone-screen-3-mobile@1x.png 1x,
+                  img/iphone-screen-3-mobile@2x.png 2x" width="157" height="277" alt="Смартфон с полным пакетом">
                 </picture>
               </div>
             </div>
