@@ -58,18 +58,15 @@
 
   @media @desktop-width {
     padding-left: 0;
+    padding-top: 23px;
     padding-right: 80px;
     background-color: transparent;
     border-bottom: none;
   }
 }
 
-.fill-white {
-  fill: white;
-}
-
-.fill-pink {
-  fill: @color--highlighted;
+.main-nav__logo-link {
+  display: block;
 }
 
 .main-nav__logo-desktop {
@@ -79,24 +76,34 @@
     display: block;
     width: 147px;
     height: 40px;
-
-    /* &:hover {
-      fill: @color--highlighted;
-    } */
-
-    &:active {
-      opacity: 0.3;
-    }
   }
 }
 
-.main-nav__logo-desktop:hover {
-
-  .fill-white,
-  .fill-pink {
-    fill: @color--highlighted;
-  }
+use {
+  fill: inherit;
 }
+
+
+/*  .logo-pink {
+ fill: inherit;
+
+ &--white-part {
+   fill: white;
+ }
+
+ &--pink-part {
+   fill: @color--highlighted;
+ }
+} */
+
+use.pink-desktop {
+  fill: blue;
+}
+
+.pink-desktop:hover {
+  fill: @color--highlighted;
+}
+
 
 .main-nav__logo-tablet {
   display: none;
@@ -155,7 +162,7 @@
 } */
 
 .main-nav__toggle {
-  //float: right;
+  display: block;
   font-size: 0;
   //padding-top: 0;
 
@@ -213,6 +220,8 @@
     &:after {
       position: absolute;
       content: "";
+      display: block;
+      top: 0;
       width: 30px;
       height: 4px;
       background-color: @bg;
