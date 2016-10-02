@@ -48,6 +48,7 @@
 
   img {
     display: block;
+    background-color: lightgrey;
 
     @media @tablet-width {
       width: 300px;
@@ -106,7 +107,8 @@
       }
 
       @media @desktop-width {
-        margin-bottom: 14px;
+        margin-bottom: 12px;
+        margin-right: auto;
       }
     }
 
@@ -120,6 +122,8 @@
 
   @media @desktop-width {
     margin-top: -3px;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
@@ -158,10 +162,10 @@
   }
 
   @media @desktop-width {
-    width: 52px;
-    height: 52px;
-    padding-right: 7px;
-    padding-bottom: 4px;
+    width: 48px;
+    height: 48px;
+    //padding-right: 7px;
+    //padding-bottom: 4px;
   }
 }
 
@@ -175,10 +179,17 @@
   }
 
   @media @desktop-width {
-    width: 52px;
-    height: 48px;
-    padding-right: 7px;
-    padding-bottom: 5px;
+    width: 55px;
+    height: 50px;
+    padding-right: 5px;
+    //padding-bottom: 5px;
+  }
+}
+
+.filter-labs__contrast {
+
+  @media @tablet-width {
+    padding-left: 5px;
   }
 }
 
@@ -192,10 +203,10 @@
   }
 
   @media @desktop-width {
-    width: 32px;
-    height: 32px;
-    padding-right: 3px;
-    padding-bottom: 7px;
+    width: 33px;
+    height: 33px;
+    //padding-right: 7px;
+    //padding-bottom: 7px;
   }
 }
 

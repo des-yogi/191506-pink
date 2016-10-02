@@ -54,28 +54,3 @@ window.addEventListener('keydown', function(event) {
     }
   }
 } );
-
-/*var logoPink = document.querySelector('.main-nav__logo-link');
-var svgPink = document.querySelector('.logo-white-part');
-
-logoPink.addEventListener("mouseover", function(event) {
-  event.preventDefault();
-  svgPink.style.fill = "red";
-});
-
-logoPink.addEventListener("mouseout", function(event) {
-  event.preventDefault();
-  svgPink.style.fill = "white";
-});*/
-
-
-
-/*function initMap() {
-  var mapOptions = {
-    zoom: 4,
-    center: {lat: -33, lng: 151},
-    disableDefaultUI: true
-  }
-  var map = new google.maps.Map(document.getElementById("mymap"),
-       mapOptions);
-}*/
