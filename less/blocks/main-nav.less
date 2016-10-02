@@ -65,10 +65,6 @@
   }
 }
 
-.main-nav__logo-link {
-  display: block;
-}
-
 .main-nav__logo-desktop {
   display: none;
 
@@ -79,31 +75,37 @@
   }
 }
 
-use {
+.logo-white-part {
   fill: inherit;
 }
 
-
-/*  .logo-pink {
- fill: inherit;
-
- &--white-part {
-   fill: white;
- }
-
- &--pink-part {
-   fill: @color--highlighted;
- }
-} */
-
-use.pink-desktop {
-  fill: blue;
-}
-
-.pink-desktop:hover {
+.logo-pink-part {
   fill: @color--highlighted;
 }
 
+.main-nav__logo-link {
+  display: block;
+  fill: white;
+
+  &:hover {
+    fill: @color--highlighted;
+  }
+
+  &:active {
+    fill: white;
+    opacity: 0.3;
+  }
+}
+
+
+/* .main-nav__logo-link:hover .main-nav__logo-desktop {
+  fill: @color--highlighted;
+}
+
+.main-nav__logo-link:active .main-nav__logo-desktop {
+  fill: white;
+  opacity: 0.3;
+} */
 
 .main-nav__logo-tablet {
   display: none;
@@ -166,6 +168,19 @@ use.pink-desktop {
   font-size: 0;
   //padding-top: 0;
 
+  &:hover,
+  &:hover:after,
+  &:hover:before {
+    background-color: @color--highlighted;
+  }
+
+  &:active,
+  &:active:after,
+  &:active:before {
+    opacity: 0.4;
+  }
+
+
   &--closed {
     position: relative;
     display: block;
@@ -194,7 +209,7 @@ use.pink-desktop {
         transform: translateY(20px);
       }
 
-    &:hover,
+    /* &:hover,
     &:hover:after,
     &:hover:before {
       background-color: @color--highlighted;
@@ -204,18 +219,18 @@ use.pink-desktop {
     &:active:after,
     &:active:before {
       opacity: 0.4;
-    }
+    } */
   }
 
   &--open {
-  position: relative;
-  display: block;
-  width: 30px;
-  height: 4px;
-  //margin-top: 10px;
-  background-color: @bg;
-  border-radius: 1px;
-  transform: rotate(45deg) translateX(9px) translateY(3px);
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 4px;
+    //margin-top: 10px;
+    background-color: @bg;
+    border-radius: 1px;
+    transform: rotate(45deg) translateX(9px) translateY(3px);
 
     &:after {
       position: absolute;
@@ -229,11 +244,11 @@ use.pink-desktop {
       transform: rotate(-90deg);
     }
 
-    &:before {
-      display: none;
-    }
+  &:before {
+    display: none;
+  }
 
-  &:hover,
+  /* &:hover,
   &:hover:after {
     background-color: @color--highlighted;
   }
@@ -241,7 +256,7 @@ use.pink-desktop {
   &:active,
   &:active:after {
     opacity: 0.4;
-  }
+  } */
 }
 
   @media @tablet-width {
