@@ -7,67 +7,124 @@
   justify-content: space-between;
   top: 50%;
   width: 100%;
-  z-index: 100;
+  z-index: 30;
+  padding-top: 34px;
+  padding-bottom: 45px;
   text-align: center;
   background-color: #fff;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
 
+  @media @tablet-width {
+    padding-top: 28px;
+    padding-bottom: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
   h3 {
-    .container();
     margin-bottom: 25px;
     font-size: @font-size--big;
     font-weight: @font-weight--bold;
+    color: #000;
+
+    @media @tablet-width {
+      padding: 0 25px;
+      font-size: @font-size--30;
+      line-height: @line-height--40;
+    }
   }
 
   p {
-    .container();
     margin-bottom: 33px;
     line-height: @line-height;
-  }
 
-  button {
-    max-width: 280px;
-    margin: auto;
-    text-transform: uppercase;
+    @media @tablet-width {
+      font-size: @font-size--big;
+    }
   }
 }
 
 .popup-alert__inner {
+  display: none;
   min-height: 289px;
   margin-top: -150px;
-  padding-top: 39px;
-  padding-bottom: 50px;
-  display: none;
 
   p {
     margin-bottom: 38px;
   }
+
+  @media @tablet-width {
+    left: 50%;
+    width: 460px;
+    min-height: 363px;
+    transform: translateX(-50%);
+    border-radius: 5px;
+  }
 }
 
-.popup__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 90;
-  display: none;
+.popup-alert__text,
+.popup-confirmation__text {
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+
+  @media @tablet-width {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.popup-confirmation__text {
+
+  @media @tablet-width {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media @desktop-width {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
 }
 
 .popup-confirmation__inner {
+  display: none;
   min-height: 380px;
   margin-top: -190px;
   padding-top: 39px;
-  display: none;
+  padding-bottom: 0;
+
+  @media @tablet-width {
+    left: 50%;
+    width: 460px;
+    min-height: 431px;
+    padding-left: 0;
+    padding-right: 0;
+    transform: translateX(-50%);
+    border-radius: 5px;
+  }
+
+  @media @desktop-width {
+    width: 780px;
+    min-height: 377px;
+  }
 }
 
 .popup-confirmation__btn-wrapper {
-  //width: 320px;
   display: flex;
   width: 100%;
   min-height: 163px;
-  padding-left: 20px;
-  padding-right: 20px;
   background-color: @bg--grey;
+}
+
+.popup__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
 }
