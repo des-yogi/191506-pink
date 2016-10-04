@@ -1,15 +1,28 @@
 .page-header {
   width: 100%;
-  background: url(../img/bg-back-mobile@1x.jpg) no-repeat #1d2631;
-  background-position: center 0;
+  background-image: url(../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center 3px;
   background-size: 700px auto;
+  background-color: #1d2631;
 
   &--nojs {
     background-position: center 260px;
   }
 
+  @media (min-resolution: 200dpi),
+         (min-resolution: 2dppx) {
+    background-image: url(../img/bg-back-mobile@2x.jpg);
+    background-position: center 3px;
+    background-size: 700px auto;
+
+    &--nojs {
+      background-position: center 260px;
+    }
+  }
+
   @media @tablet-width {
-    background: url(../img/bg-back-tablet@1x.jpg) no-repeat;
+    background-image: url(../img/bg-back-tablet@1x.jpg);
     background-color: @bg--darkblue;
     background-size: 1200px auto;
     background-position: center 0;
@@ -19,29 +32,10 @@
     }
   }
 
-  @media @desktop-width {
-    background: url(../img/bg-back-desktop@1x.jpg) no-repeat;
-    background-size: 2560px auto;
-    background-position: center 0;
-    background-color: @bg--darkblue;
-  }
-
   @media (min-resolution: 200dpi),
-         (min-resolution: 2dppx) {
-    background: url(../img/bg-back-mobile@2x.jpg) no-repeat #1d2631;
-    background-position: center 0;
-    background-size: 700px auto;
-
-    &--nojs {
-      background-position: center 260px;
-    }
-  }
-
-  @media (min-resolution: 200dpi),
-         (min-resolution: 2dppx)
-                and @tablet-width {
-    background: url(../img/bg-back-tablet@2x.jpg) no-repeat;
-    background-color: @bg--darkblue;
+          (min-resolution: 2dppx)
+                      and @tablet-width {
+    background-image: url(../img/bg-back-tablet@2x.jpg);
     background-size: 1200px auto;
     background-position: center 0;
 
@@ -50,13 +44,18 @@
     }
   }
 
-  @media (min-resolution: 200dpi),
-         (min-resolution: 2dppx)
-                and @desktop-width {
-    background: url(../img/bg-back-desktop@2x.jpg) no-repeat;
+  @media @desktop-width {
+    background-image: url(../img/bg-back-desktop@1x.jpg);
     background-size: 2560px auto;
-    background-position: center 12px;
-    background-color: @bg--darkblue;
+    background-position: center 0;
+  }
+
+  @media  (min-resolution: 200dpi),
+          (min-resolution: 2dppx)
+                      and @desktop-width {
+    background-image: url(../img/bg-back-desktop@2x.jpg);
+    background-size: 2560px auto;
+    background-position: center 0;
   }
 }
 

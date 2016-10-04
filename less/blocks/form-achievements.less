@@ -2,13 +2,16 @@
   background-color: @bg--grey;
 
   @media @tablet-width {
-    .container();
     order: 3;
+    width: 660px;
+    margin: auto;
+    padding: 0 20px;
     padding-bottom: 13px;
     background-color: white;
   }
 
   @media @desktop-width {
+    width: 960px;
     padding: 0;
   }
 
@@ -54,13 +57,12 @@
 }
 
 .form-achievements__inner {
-  //.container();
   padding-top: 36px;
   padding-bottom: 55px;
 
   @media @tablet-width {
     position: relative;
-    .container-deny();
+    width: auto;
     padding-top: 56px;
     padding-bottom: 53px;
     padding-left: 60px;
@@ -78,6 +80,9 @@
     justify-content: flex-start;
     align-items: flex-start;
     align-content: space-between;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
     padding-top: 57px;
     padding-bottom: 7px;
     margin-bottom: 65px;
